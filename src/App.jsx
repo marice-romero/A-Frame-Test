@@ -1,5 +1,6 @@
 import "aframe";
 import { Entity, Scene } from "aframe-react";
+import "./App.css";
 
 function App() {
   return (
