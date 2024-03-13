@@ -4,7 +4,7 @@ import "./App.css";
 
 function App() {
   return (
-    <Scene embedded arjs="sourceType: webcam;">
+    <Scene>
       <Entity
         geometry={{ primitive: "box" }}
         material={{ color: "red" }}
