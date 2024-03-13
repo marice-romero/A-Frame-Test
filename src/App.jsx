@@ -1,16 +1,13 @@
 import "aframe";
+import "ar.js";
 import { Entity, Scene } from "aframe-react";
 import "./App.css";
 
 function App() {
   return (
-    <Scene embedded arjs="sourceType: webcam;">
-      <Entity
-        geometry={{ primitive: "box" }}
-        material={{ color: "red" }}
-        position={{ x: 0, y: 0, z: -5 }}
-        rotation={{ x: 0, y: 45, z: 0 }}
-      />
+    <Scene vr-mode-ui="enabled: false">
+      <Entity primitive="a-camera" position="0 1.6 0" />
+      <Entity primitive="a-box" color="red" position="0 0 -5" />
     </Scene>
   );
 }
