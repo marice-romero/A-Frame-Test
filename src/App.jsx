@@ -5,6 +5,18 @@ import "./App.css";
 import bulbasaur from "./assets/bulbasaur.glb";
 
 function App() {
+  AFRAME.registerComponent("markerhandler", {
+    init: function () {
+      const model = document.querySelector("#bulbasaur-model");
+      const asset = document.querySelector("#bulbasaur");
+      const src = asset.getAttribute("src");
+      model.addEventListener("model-loaded", () => {
+        if (!THREE.Cache.files || !THREE.Cache.files[src]) {
+          location.reload();
+        }
+      });
+    },
+  });
   return (
     <Scene vr-mode-ui="enabled: false" renderer="logarithmicDepthBuffer: true;">
       <a-assets>
@@ -12,6 +24,7 @@ function App() {
       </a-assets>
       <Entity camera>
         <Entity
+          id="bulbasaur-model"
           gltf-model="#bulbasaur"
           scale={{ x: 0.75, y: 0.75, z: 0.75 }}
           position={{ x: 0, y: 0, z: -5 }}
