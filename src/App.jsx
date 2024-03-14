@@ -18,7 +18,11 @@ function App() {
     },
   });
   return (
-    <Scene vr-mode-ui="enabled: false" renderer="logarithmicDepthBuffer: true;">
+    <Scene
+      vr-mode-ui="enabled: false"
+      renderer="logarithmicDepthBuffer: true;"
+      markerhandler
+    >
       <a-assets>
         <a-asset-item id="bulbasaur" src={bulbasaur}></a-asset-item>
       </a-assets>
