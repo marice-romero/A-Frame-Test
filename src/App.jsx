@@ -6,7 +6,7 @@ import bulbasaur from "./assets/bulbasaur.glb";
 
 function App() {
   return (
-    <Scene vr-mode-ui="enabled: false">
+    <Scene vr-mode-ui="enabled: false" renderer="logarithmicDepthBuffer: true;">
       <a-assets>
         <a-asset-item id="bulbasaur" src={bulbasaur}></a-asset-item>
       </a-assets>
