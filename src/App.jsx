@@ -27,7 +27,6 @@ function App() {
         <a-asset-item id="bulbasaur" src={bulbasaur}></a-asset-item>
       </a-assets>
       <Entity camera>
-        <a-camera position="0 0.5 2" look-controls-enabled="false"></a-camera>
         <Entity
           id="bulbasaur-model"
           gltf-model="#bulbasaur"
